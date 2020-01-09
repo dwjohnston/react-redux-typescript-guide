@@ -7,7 +7,7 @@ export const withErrorBoundary = <BaseProps extends {}>(
 ) => {
   type HocProps = {
     // here you can extend hoc with new props
-  };
+  } & BaseProps;
   type HocState = {
     readonly error: Error | null | undefined;
   };
